@@ -1,0 +1,33 @@
+<!-- headerのメニューのテンプレートのHTMLファイル -->
+
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link th:href="@{webjars/bootstrap/4.4.1-1/css/bootstrap.min.css}" rel="stylesheet"/>
+    <script th:href="@{webjars/jquery/3.5.0/js/jquery.min.js}"></script>
+    <script th:href="@{webjars/bootstrap/4.4.1-1/js/bootstrap.min.js}"></script>
+	<title>DisBot</title>
+</head>
+<body>
+	<div th:fragment="headerMenu">
+		<div class="row">
+			<div class="col d-flex justify-content-between align-items-end border-bottom">
+				<div>
+					<!-- ディスコードの画像  -->
+					<img th:src="@{/images/discord_icon.png}" width="100" height="100">
+				</div>
+				<div>
+					<!-- ヘッダーのメニュータグ -->
+					<nav class="nav nav-pills nav-justified">
+					  <a class="px-5 py-3 nav-item nav-link active" href="#">Active</a>
+					  <a class="px-5 py-3 nav-item nav-link" href="#">Link</a>
+					  <a class="px-5 py-3 nav-item nav-link" href="#">Link</a>
+					  <a class="px-5 py-3 nav-item nav-link disabled" href="#">Disabled</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

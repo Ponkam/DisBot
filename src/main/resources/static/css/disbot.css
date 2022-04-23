@@ -1,0 +1,58 @@
+/*サイト内配色*/
+/* discord  */
+.dis-bg-color{
+    /* discordメインカラー */
+    background: #2f3138;
+    }
+
+/* discord 紫 */
+.dis-componet-color{
+    background: #8a80ff;
+}
+
+/* 文字の色 */
+.dis-text-color{
+    color:#BBBBBB;
+}
+
+/* フォントの設定 */
+
+/* サイト内の基本フォントサイズ */
+.dis-content-text{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.dis-menu-font{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dis-sub-content-color{
+    color:#BBBBBB;
+} 
+
+.dis-border-top{
+    border-top:3px solid #BBBBBB;
+}
+
+.dis-border-bottom{
+    border-bottom:3px solid #BBBBBB;
+}
+
+
+/*header関連の設定*/
+.dis-header-img{
+    background-image:url(/images/discord_icon.png); /* 画像のURLを指定       */
+    background-size: cover;
+    width:100px;                                     /* 横幅のサイズを指定    */
+    height:100px;                                   /* 縦幅のサイズを指定    */
+    border-radius: 25%;
+}
+
+.dis-menu-active{
+    /* discordのサイドメニューの色 */
+    background: #202427;
+}
+
+/* 最後の作業はheaderの画像の調整をした。 */
