@@ -21,6 +21,8 @@ public class DisBotController {
 	public ModelAndView index(ModelAndView mav){
 		mav.setViewName("index");
 		System.out.println("こんにちは");
+		System.out.println("メインだよ");
+		System.out.println("main");
 		return mav;
 	}
 
@@ -32,6 +34,7 @@ public class DisBotController {
 
     @RequestMapping(value = "/login" , method = RequestMethod.POST )
     public ModelAndView login(@RequestParam("token") String token , ModelAndView mav) {
+		System.out.println(token);
     	disService.discordBotLogin(token);
     	mav.setViewName("main");
 
@@ -43,6 +46,20 @@ public class DisBotController {
 		}
     	return mav;
     }
+
+//    @RequestMapping(value = "/main" , method = RequestMethod.GET)
+//	public ModelAndView managed(@RequestParam("userID") String userID , ModelAndView mav){
+//		mav.setViewName("main");
+//		return mav;
+//	}
+
+	@RequestMapping(value = "/main" , method = RequestMethod.GET)
+	public ModelAndView managed(ModelAndView mav){
+		mav.setViewName("main");
+		System.out.println("メインだよ");
+		return mav;
+	}
+
 
     @RequestMapping(value = "/message" , method =RequestMethod.POST)
     public ModelAndView message(@RequestParam("message") String message , ModelAndView mav) {
