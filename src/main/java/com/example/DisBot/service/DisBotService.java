@@ -1,5 +1,9 @@
 package com.example.DisBot.service;
 
+import discord4j.core.object.entity.channel.GuildChannel;
+import discord4j.discordjson.Id;
+import discord4j.discordjson.json.*;
+import discord4j.discordjson.possible.Possible;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -9,6 +13,10 @@ import com.example.DisBot.data.dto.DisBotDto;
 import discord4j.core.DiscordClientBuilder;
 import discord4j.core.event.domain.message.MessageCreateEvent;
 import discord4j.core.object.entity.Message;
+import reactor.core.publisher.Flux;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DisBotService {
@@ -46,11 +54,13 @@ public class DisBotService {
         .flatMap(Message::getChannel)
         .flatMap(channel -> channel.createMessage("ハロー"))
         .subscribe();
-
-		bot.getClient().onDisconnect();
 	}
 
 	public void message(String message) {
+//		Message msg = new Message(bot.getClient() ,data);
+//		msg.getChannel().subscribe();
+		Flux<GuildChannel> channelid = bot.getClient().getGuildChannels(bot.getClient().getGuilds().blockFirst().getId());
+		System.out.println(channelid);
 		bot.getClient().onDisconnect();
 	}
 

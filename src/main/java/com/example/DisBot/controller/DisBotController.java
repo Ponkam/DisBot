@@ -20,9 +20,6 @@ public class DisBotController {
 	@RequestMapping(value = "/" , method = RequestMethod.GET)
 	public ModelAndView index(ModelAndView mav){
 		mav.setViewName("index");
-		System.out.println("こんにちは");
-		System.out.println("メインだよ");
-		System.out.println("main");
 		return mav;
 	}
 

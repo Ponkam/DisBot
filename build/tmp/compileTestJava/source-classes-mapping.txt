@@ -1,2 +1,4 @@
 com/example/DisBot/DisBotApplicationTests.java
  com.example.DisBot.DisBotApplicationTests
+com/example/DisBot/Service/DisBotServiceTest.java
+ com.example.DisBot.Service.DisBotServiceTest
